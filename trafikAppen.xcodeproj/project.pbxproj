@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECF8AC3C1D8D37340055F93C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8AC3B1D8D37340055F93C /* AppDelegate.swift */; };
+		ECF8AC3E1D8D37340055F93C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8AC3D1D8D37340055F93C /* ViewController.swift */; };
+		ECF8AC411D8D37340055F93C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF8AC3F1D8D37340055F93C /* Main.storyboard */; };
+		ECF8AC441D8D37340055F93C /* trafikAppen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECF8AC421D8D37340055F93C /* trafikAppen.xcdatamodeld */; };
+		ECF8AC461D8D37340055F93C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF8AC451D8D37340055F93C /* Assets.xcassets */; };
+		ECF8AC491D8D37340055F93C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF8AC471D8D37340055F93C /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ECF8AC381D8D37340055F93C /* trafikAppen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trafikAppen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF8AC3B1D8D37340055F93C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECF8AC3D1D8D37340055F93C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECF8AC401D8D37340055F93C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECF8AC431D8D37340055F93C /* trafikAppen.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = trafikAppen.xcdatamodel; sourceTree = "<group>"; };
+		ECF8AC451D8D37340055F93C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECF8AC481D8D37340055F93C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECF8AC4A1D8D37340055F93C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECF8AC351D8D37340055F93C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECF8AC2F1D8D37340055F93C = {
+			isa = PBXGroup;
+			children = (
+				ECF8AC3A1D8D37340055F93C /* trafikAppen */,
+				ECF8AC391D8D37340055F93C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECF8AC391D8D37340055F93C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECF8AC381D8D37340055F93C /* trafikAppen.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECF8AC3A1D8D37340055F93C /* trafikAppen */ = {
+			isa = PBXGroup;
+			children = (
+				ECF8AC3B1D8D37340055F93C /* AppDelegate.swift */,
+				ECF8AC3D1D8D37340055F93C /* ViewController.swift */,
+				ECF8AC3F1D8D37340055F93C /* Main.storyboard */,
+				ECF8AC451D8D37340055F93C /* Assets.xcassets */,
+				ECF8AC471D8D37340055F93C /* LaunchScreen.storyboard */,
+				ECF8AC4A1D8D37340055F93C /* Info.plist */,
+				ECF8AC421D8D37340055F93C /* trafikAppen.xcdatamodeld */,
+			);
+			path = trafikAppen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECF8AC371D8D37340055F93C /* trafikAppen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECF8AC4D1D8D37340055F93C /* Build configuration list for PBXNativeTarget "trafikAppen" */;
+			buildPhases = (
+				ECF8AC341D8D37340055F93C /* Sources */,
+				ECF8AC351D8D37340055F93C /* Frameworks */,
+				ECF8AC361D8D37340055F93C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = trafikAppen;
+			productName = trafikAppen;
+			productReference = ECF8AC381D8D37340055F93C /* trafikAppen.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECF8AC301D8D37340055F93C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Ceonn Bobst";
+				TargetAttributes = {
+					ECF8AC371D8D37340055F93C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 65KF5JH7Y3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = ECF8AC331D8D37340055F93C /* Build configuration list for PBXProject "trafikAppen" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECF8AC2F1D8D37340055F93C;
+			productRefGroup = ECF8AC391D8D37340055F93C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECF8AC371D8D37340055F93C /* trafikAppen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECF8AC361D8D37340055F93C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF8AC491D8D37340055F93C /* LaunchScreen.storyboard in Resources */,
+				ECF8AC461D8D37340055F93C /* Assets.xcassets in Resources */,
+				ECF8AC411D8D37340055F93C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECF8AC341D8D37340055F93C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF8AC3E1D8D37340055F93C /* ViewController.swift in Sources */,
+				ECF8AC441D8D37340055F93C /* trafikAppen.xcdatamodeld in Sources */,
+				ECF8AC3C1D8D37340055F93C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ECF8AC3F1D8D37340055F93C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECF8AC401D8D37340055F93C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ECF8AC471D8D37340055F93C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECF8AC481D8D37340055F93C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECF8AC4B1D8D37340055F93C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ECF8AC4C1D8D37340055F93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECF8AC4E1D8D37340055F93C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 65KF5JH7Y3;
+				INFOPLIST_FILE = trafikAppen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceonn.trafikAppen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ECF8AC4F1D8D37340055F93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 65KF5JH7Y3;
+				INFOPLIST_FILE = trafikAppen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceonn.trafikAppen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECF8AC331D8D37340055F93C /* Build configuration list for PBXProject "trafikAppen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECF8AC4B1D8D37340055F93C /* Debug */,
+				ECF8AC4C1D8D37340055F93C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECF8AC4D1D8D37340055F93C /* Build configuration list for PBXNativeTarget "trafikAppen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECF8AC4E1D8D37340055F93C /* Debug */,
+				ECF8AC4F1D8D37340055F93C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ECF8AC421D8D37340055F93C /* trafikAppen.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ECF8AC431D8D37340055F93C /* trafikAppen.xcdatamodel */,
+			);
+			currentVersion = ECF8AC431D8D37340055F93C /* trafikAppen.xcdatamodel */;
+			path = trafikAppen.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ECF8AC301D8D37340055F93C /* Project object */;
+}
