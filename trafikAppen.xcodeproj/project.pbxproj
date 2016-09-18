@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B901EAF1DD7FBFB10FA95352 /* Pods_trafikAppen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338BF22C60E791909C3AB629 /* Pods_trafikAppen.framework */; };
+		EC4E54661D8D754600A8EFAF /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4E54651D8D754600A8EFAF /* NewsTableViewCell.swift */; };
+		EC4E54681D8D7AEB00A8EFAF /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4E54671D8D7AEB00A8EFAF /* FeedParser.swift */; };
+		EC7A5C821D8E8B59008E011D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC7A5C811D8E8B59008E011D /* GoogleService-Info.plist */; };
 		ECF8AC3C1D8D37340055F93C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8AC3B1D8D37340055F93C /* AppDelegate.swift */; };
 		ECF8AC3E1D8D37340055F93C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8AC3D1D8D37340055F93C /* ViewController.swift */; };
 		ECF8AC411D8D37340055F93C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF8AC3F1D8D37340055F93C /* Main.storyboard */; };
@@ -16,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		338BF22C60E791909C3AB629 /* Pods_trafikAppen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trafikAppen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDB6149579AACA37DA76BEA7 /* Pods-trafikAppen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trafikAppen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trafikAppen/Pods-trafikAppen.debug.xcconfig"; sourceTree = "<group>"; };
+		EC4E54651D8D754600A8EFAF /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		EC4E54671D8D7AEB00A8EFAF /* FeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
+		EC7A5C811D8E8B59008E011D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECF8AC381D8D37340055F93C /* trafikAppen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trafikAppen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF8AC3B1D8D37340055F93C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECF8AC3D1D8D37340055F93C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,7 @@
 		ECF8AC451D8D37340055F93C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECF8AC481D8D37340055F93C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECF8AC4A1D8D37340055F93C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F39F892FEA03546D47BB9AD2 /* Pods-trafikAppen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trafikAppen.release.xcconfig"; path = "Pods/Target Support Files/Pods-trafikAppen/Pods-trafikAppen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B901EAF1DD7FBFB10FA95352 /* Pods_trafikAppen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00EFD5E0BC6827D6F1057431 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				338BF22C60E791909C3AB629 /* Pods_trafikAppen.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		880E7A0D1CFB9A9FB07AEA05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDB6149579AACA37DA76BEA7 /* Pods-trafikAppen.debug.xcconfig */,
+				F39F892FEA03546D47BB9AD2 /* Pods-trafikAppen.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC4E54621D8D58C900A8EFAF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ECF8AC451D8D37340055F93C /* Assets.xcassets */,
+				ECF8AC4A1D8D37340055F93C /* Info.plist */,
+				EC7A5C811D8E8B59008E011D /* GoogleService-Info.plist */,
+				ECF8AC421D8D37340055F93C /* trafikAppen.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EC4E54631D8D5ADC00A8EFAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ECF8AC3B1D8D37340055F93C /* AppDelegate.swift */,
+				ECF8AC3D1D8D37340055F93C /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EC4E54641D8D5B0E00A8EFAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC4E54651D8D754600A8EFAF /* NewsTableViewCell.swift */,
+				EC4E54671D8D7AEB00A8EFAF /* FeedParser.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		ECF8AC2F1D8D37340055F93C = {
 			isa = PBXGroup;
 			children = (
 				ECF8AC3A1D8D37340055F93C /* trafikAppen */,
 				ECF8AC391D8D37340055F93C /* Products */,
+				880E7A0D1CFB9A9FB07AEA05 /* Pods */,
+				00EFD5E0BC6827D6F1057431 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +115,11 @@
 		ECF8AC3A1D8D37340055F93C /* trafikAppen */ = {
 			isa = PBXGroup;
 			children = (
-				ECF8AC3B1D8D37340055F93C /* AppDelegate.swift */,
-				ECF8AC3D1D8D37340055F93C /* ViewController.swift */,
 				ECF8AC3F1D8D37340055F93C /* Main.storyboard */,
-				ECF8AC451D8D37340055F93C /* Assets.xcassets */,
 				ECF8AC471D8D37340055F93C /* LaunchScreen.storyboard */,
-				ECF8AC4A1D8D37340055F93C /* Info.plist */,
-				ECF8AC421D8D37340055F93C /* trafikAppen.xcdatamodeld */,
+				EC4E54631D8D5ADC00A8EFAF /* Controller */,
+				EC4E54641D8D5B0E00A8EFAF /* View */,
+				EC4E54621D8D58C900A8EFAF /* Resources */,
 			);
 			path = trafikAppen;
 			sourceTree = "<group>";
@@ -74,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECF8AC4D1D8D37340055F93C /* Build configuration list for PBXNativeTarget "trafikAppen" */;
 			buildPhases = (
+				FD7EC677DB49D27DD7C3DD07 /* [CP] Check Pods Manifest.lock */,
 				ECF8AC341D8D37340055F93C /* Sources */,
 				ECF8AC351D8D37340055F93C /* Frameworks */,
 				ECF8AC361D8D37340055F93C /* Resources */,
+				F01241EC874C6436615F1217 /* [CP] Embed Pods Frameworks */,
+				0DC5F6E91B3A75F1A709118C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -100,6 +160,7 @@
 					ECF8AC371D8D37340055F93C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 65KF5JH7Y3;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7A5C821D8E8B59008E011D /* GoogleService-Info.plist in Resources */,
 				ECF8AC491D8D37340055F93C /* LaunchScreen.storyboard in Resources */,
 				ECF8AC461D8D37340055F93C /* Assets.xcassets in Resources */,
 				ECF8AC411D8D37340055F93C /* Main.storyboard in Resources */,
@@ -135,6 +197,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DC5F6E91B3A75F1A709118C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trafikAppen/Pods-trafikAppen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F01241EC874C6436615F1217 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trafikAppen/Pods-trafikAppen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD7EC677DB49D27DD7C3DD07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ECF8AC341D8D37340055F93C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -142,7 +252,9 @@
 			files = (
 				ECF8AC3E1D8D37340055F93C /* ViewController.swift in Sources */,
 				ECF8AC441D8D37340055F93C /* trafikAppen.xcdatamodeld in Sources */,
+				EC4E54661D8D754600A8EFAF /* NewsTableViewCell.swift in Sources */,
 				ECF8AC3C1D8D37340055F93C /* AppDelegate.swift in Sources */,
+				EC4E54681D8D7AEB00A8EFAF /* FeedParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +373,7 @@
 		};
 		ECF8AC4E1D8D37340055F93C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDB6149579AACA37DA76BEA7 /* Pods-trafikAppen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 65KF5JH7Y3;
@@ -274,6 +387,7 @@
 		};
 		ECF8AC4F1D8D37340055F93C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F39F892FEA03546D47BB9AD2 /* Pods-trafikAppen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 65KF5JH7Y3;
@@ -304,6 +418,7 @@
 				ECF8AC4F1D8D37340055F93C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
