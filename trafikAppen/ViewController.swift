@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MenuTransitionManagerDelegate {
     
     // IBOutlet
     @IBOutlet var tableView: UITableView!
@@ -17,6 +17,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Variables
     private var rssItems:[(title: String, description: String, pubDate: String)]?
+    
+    let menuTransitionManager = MenuTransitionManager()
+    
+    // Functions
+    func dismiss() {
+        dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Parser setup
         let feedParser = FeedParser()
-        feedParser.parseFeed(feedUrl: "https://developer.apple.com/news/rss/news.rss", completionHandler: { (rssItems: [(title: String, description: String, pubDate: String)]) -> Void in
+        feedParser.parseFeed(feedUrl: "http://www.apple.com/pr/feeds/pr.rss", completionHandler: { (rssItems: [(title: String, description: String, pubDate: String)]) -> Void in
             
             self.rssItems = rssItems
             OperationQueue.main.addOperation({ () -> Void in
@@ -47,6 +54,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    // MARK: - Segues
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let trafficController = TrafficContentViewController()
+    
+        let myData = rssItems?[indexPath.row]
+        performSegue(withIdentifier: "showContentSegue", sender: myData)
+        
+        trafficController.contentTitleLabel.text = myData?.title
+        trafficController.contentPubDateLabel.text = myData?.pubDate
+        trafficController.contentDescriptionLabel.text = myData?.description
+        
+    }
+    
+    // Mark: - Table View
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -75,6 +97,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        // Define the initial state (Before the animation)
+        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, 500, 0, 0)
+        cell.layer.transform = rotationTransform
+        // Define the final state (After the animation)
+        UIView.animate(withDuration: 0.8, animations: { cell.layer.transform =
+            CATransform3DIdentity })
+        
+    }
+    
+    // MARK: - Navigation
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        let sourceController = segue.source as! MenuTableViewController
+        self.title = sourceController.currentItem
+    }
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let menuTableViewController = segue.destination as!
+        MenuTableViewController
+        menuTableViewController.currentItem = self.title!
+        menuTableViewController.transitioningDelegate = menuTransitionManager
+        menuTransitionManager.delegate = self
     }
     
 }

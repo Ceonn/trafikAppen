@@ -11,6 +11,10 @@
 		EC4E54661D8D754600A8EFAF /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4E54651D8D754600A8EFAF /* NewsTableViewCell.swift */; };
 		EC4E54681D8D7AEB00A8EFAF /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4E54671D8D7AEB00A8EFAF /* FeedParser.swift */; };
 		EC7A5C821D8E8B59008E011D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC7A5C811D8E8B59008E011D /* GoogleService-Info.plist */; };
+		EC7A5C841D8EA01C008E011D /* TrafficContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A5C831D8EA01C008E011D /* TrafficContentViewController.swift */; };
+		EC7A5C861D905AD1008E011D /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A5C851D905AD1008E011D /* MenuTableViewController.swift */; };
+		EC7A5C881D905AEF008E011D /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A5C871D905AEF008E011D /* MenuTableViewCell.swift */; };
+		EC7A5C8A1D9066B1008E011D /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A5C891D9066B1008E011D /* MenuTransitionManager.swift */; };
 		ECF8AC3C1D8D37340055F93C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8AC3B1D8D37340055F93C /* AppDelegate.swift */; };
 		ECF8AC3E1D8D37340055F93C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8AC3D1D8D37340055F93C /* ViewController.swift */; };
 		ECF8AC411D8D37340055F93C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF8AC3F1D8D37340055F93C /* Main.storyboard */; };
@@ -25,6 +29,10 @@
 		EC4E54651D8D754600A8EFAF /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		EC4E54671D8D7AEB00A8EFAF /* FeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
 		EC7A5C811D8E8B59008E011D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC7A5C831D8EA01C008E011D /* TrafficContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficContentViewController.swift; sourceTree = "<group>"; };
+		EC7A5C851D905AD1008E011D /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		EC7A5C871D905AEF008E011D /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		EC7A5C891D9066B1008E011D /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 		ECF8AC381D8D37340055F93C /* trafikAppen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trafikAppen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF8AC3B1D8D37340055F93C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECF8AC3D1D8D37340055F93C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +89,8 @@
 			children = (
 				ECF8AC3B1D8D37340055F93C /* AppDelegate.swift */,
 				ECF8AC3D1D8D37340055F93C /* ViewController.swift */,
+				EC7A5C851D905AD1008E011D /* MenuTableViewController.swift */,
+				EC7A5C831D8EA01C008E011D /* TrafficContentViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -90,6 +100,8 @@
 			children = (
 				EC4E54651D8D754600A8EFAF /* NewsTableViewCell.swift */,
 				EC4E54671D8D7AEB00A8EFAF /* FeedParser.swift */,
+				EC7A5C871D905AEF008E011D /* MenuTableViewCell.swift */,
+				EC7A5C891D9066B1008E011D /* MenuTransitionManager.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -251,7 +263,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF8AC3E1D8D37340055F93C /* ViewController.swift in Sources */,
+				EC7A5C861D905AD1008E011D /* MenuTableViewController.swift in Sources */,
+				EC7A5C881D905AEF008E011D /* MenuTableViewCell.swift in Sources */,
 				ECF8AC441D8D37340055F93C /* trafikAppen.xcdatamodeld in Sources */,
+				EC7A5C8A1D9066B1008E011D /* MenuTransitionManager.swift in Sources */,
+				EC7A5C841D8EA01C008E011D /* TrafficContentViewController.swift in Sources */,
 				EC4E54661D8D754600A8EFAF /* NewsTableViewCell.swift in Sources */,
 				ECF8AC3C1D8D37340055F93C /* AppDelegate.swift in Sources */,
 				EC4E54681D8D7AEB00A8EFAF /* FeedParser.swift in Sources */,

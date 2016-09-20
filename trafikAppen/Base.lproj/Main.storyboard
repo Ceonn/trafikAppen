@@ -28,17 +28,24 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Global Traffic" id="k2p-vR-8DS"/>
+                                    <navigationItem title="Global Traffic" id="k2p-vR-8DS">
+                                        <barButtonItem key="leftBarButtonItem" image="menu" id="Bsm-Or-G7E">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="6LK-Zx-Chl" kind="presentation" id="85c-qv-gKa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="197" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xNg-7K-nuB">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="197" id="5uR-eT-ZQ8" customClass="NewsTableViewCell" customModule="trafikAppen" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="197" id="5uR-eT-ZQ8" customClass="NewsTableViewCell" customModule="trafikAppen" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="197"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5uR-eT-ZQ8" id="3tV-dh-9n5">
-                                            <frame key="frameInset" width="375" height="196"/>
+                                            <frame key="frameInset" width="375" height="196.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 7+ sales" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-aZ-1aV">
@@ -110,11 +117,158 @@
                     <connections>
                         <outlet property="bannerView" destination="oY7-mx-1YL" id="lCB-iX-Y8c"/>
                         <outlet property="tableView" destination="xNg-7K-nuB" id="wZE-DW-zXG"/>
+                        <segue destination="KZC-KW-VM7" kind="show" identifier="showContentSegue" id="Lot-Ox-Hfh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="134.48275862068968"/>
         </scene>
+        <!--Traffic Content View Controller-->
+        <scene sceneID="7H3-lh-2cS">
+            <objects>
+                <viewController id="KZC-KW-VM7" customClass="TrafficContentViewController" customModule="trafikAppen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Fg-46-DPt"/>
+                        <viewControllerLayoutGuide type="bottom" id="HHQ-A2-SZj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Nh-uM-TEC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="J7W-PZ-MtN">
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                    <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem id="qVW-sm-ku3">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="AwE-js-44b">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="ilh-YG-wZC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="ncA-eq-HUj">
+                                <items>
+                                    <barButtonItem title="Flag" style="plain" id="NPI-FQ-eHf"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NXP-eF-382"/>
+                                    <barButtonItem systemItem="action" id="YZQ-Wk-lPK"/>
+                                </items>
+                                <color key="barTintColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmm-83-rkf">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 7+ sales" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYH-Tm-Isx">
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue, 19 Oct 2016 12:23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W14-eh-XS1">
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="300" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cD-qh-kQQ">
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QYH-Tm-Isx" firstAttribute="top" secondItem="cmm-83-rkf" secondAttribute="top" constant="10" id="6nb-yy-vpL"/>
+                                    <constraint firstItem="8cD-qh-kQQ" firstAttribute="top" secondItem="W14-eh-XS1" secondAttribute="bottom" constant="10" id="7hW-9S-89l"/>
+                                    <constraint firstAttribute="bottom" secondItem="8cD-qh-kQQ" secondAttribute="bottom" constant="459" id="Nui-gf-dj9"/>
+                                    <constraint firstItem="QYH-Tm-Isx" firstAttribute="leading" secondItem="cmm-83-rkf" secondAttribute="leading" constant="10" id="glH-G7-k9j"/>
+                                    <constraint firstAttribute="trailing" secondItem="8cD-qh-kQQ" secondAttribute="trailing" constant="10" id="hKJ-aD-IXL"/>
+                                    <constraint firstAttribute="trailing" secondItem="QYH-Tm-Isx" secondAttribute="trailing" constant="10" id="jP6-xQ-VfO"/>
+                                    <constraint firstItem="W14-eh-XS1" firstAttribute="leading" secondItem="cmm-83-rkf" secondAttribute="leading" constant="10" id="o7V-Ej-qVD"/>
+                                    <constraint firstItem="8cD-qh-kQQ" firstAttribute="leading" secondItem="cmm-83-rkf" secondAttribute="leading" constant="10" id="t0p-Fx-uax"/>
+                                    <constraint firstItem="W14-eh-XS1" firstAttribute="top" secondItem="QYH-Tm-Isx" secondAttribute="bottom" constant="10" id="vVA-rd-J1k"/>
+                                    <constraint firstAttribute="trailing" secondItem="W14-eh-XS1" secondAttribute="trailing" constant="10" id="yYo-JX-T8C"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HHQ-A2-SZj" firstAttribute="top" secondItem="ncA-eq-HUj" secondAttribute="bottom" id="0MV-UE-qz4"/>
+                            <constraint firstAttribute="trailing" secondItem="cmm-83-rkf" secondAttribute="trailing" id="81j-dv-QhV"/>
+                            <constraint firstItem="ncA-eq-HUj" firstAttribute="leading" secondItem="9Nh-uM-TEC" secondAttribute="leading" id="Hdw-9S-mE0"/>
+                            <constraint firstItem="J7W-PZ-MtN" firstAttribute="leading" secondItem="9Nh-uM-TEC" secondAttribute="leading" id="KmT-no-dn2"/>
+                            <constraint firstAttribute="trailing" secondItem="ncA-eq-HUj" secondAttribute="trailing" id="M3X-1c-7fu"/>
+                            <constraint firstItem="cmm-83-rkf" firstAttribute="top" secondItem="J7W-PZ-MtN" secondAttribute="bottom" id="P3C-Uy-gXM"/>
+                            <constraint firstAttribute="trailing" secondItem="J7W-PZ-MtN" secondAttribute="trailing" id="QYt-M7-cqp"/>
+                            <constraint firstItem="J7W-PZ-MtN" firstAttribute="top" secondItem="1Fg-46-DPt" secondAttribute="bottom" id="V4c-wO-wuu"/>
+                            <constraint firstItem="cmm-83-rkf" firstAttribute="leading" secondItem="J7W-PZ-MtN" secondAttribute="leading" id="lg6-EO-4Jc"/>
+                            <constraint firstItem="ncA-eq-HUj" firstAttribute="top" secondItem="cmm-83-rkf" secondAttribute="bottom" id="o2d-TV-hSn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentDescriptionLabel" destination="8cD-qh-kQQ" id="NyF-P1-OdN"/>
+                        <outlet property="contentPubDateLabel" destination="W14-eh-XS1" id="jIL-WG-8qB"/>
+                        <outlet property="contentTitleLabel" destination="QYH-Tm-Isx" id="bHF-yF-yJd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84I-pE-UWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1301.5999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Menu Table View Controller-->
+        <scene sceneID="1ow-1U-EfI">
+            <objects>
+                <tableViewController id="6LK-Zx-Chl" customClass="MenuTableViewController" customModule="trafikAppen" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EIh-E1-yW6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="VPy-MI-3Py">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="50" id="Ot6-Eu-NVn" customClass="MenuTableViewCell" customModule="trafikAppen" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="66" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ot6-Eu-NVn" id="Mze-Jg-JeI">
+                                    <frame key="frameInset" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDV-S3-eV5">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dDV-S3-eV5" firstAttribute="leading" secondItem="Mze-Jg-JeI" secondAttribute="leadingMargin" constant="9" id="Z8c-kQ-o4d"/>
+                                        <constraint firstAttribute="centerY" secondItem="dDV-S3-eV5" secondAttribute="centerY" id="p6A-oL-xPM"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="titleLabel" destination="dDV-S3-eV5" id="awE-Fh-dG0"/>
+                                    <segue destination="bm7-p9-YaZ" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="l9h-Zu-7Do"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="6LK-Zx-Chl" id="1is-rd-nYN"/>
+                            <outlet property="delegate" destination="6LK-Zx-Chl" id="DuU-cp-Jfo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="crE-kN-pcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bm7-p9-YaZ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="-708"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="22" height="22"/>
+    </resources>
 </document>
