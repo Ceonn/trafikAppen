@@ -28,13 +28,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Search setup
-        self.hideKeyboardWhenTappedAround()
-        
         // Table view setup
         tableView.delegate = self
         tableView.dataSource = self
         tableView.estimatedRowHeight = 155.0
+        tableView.delaysContentTouches = false
         
         // Parser setup
         let feedParser = FeedParser()
@@ -53,19 +51,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         bannerView.load(GADRequest())
         
     }
-    
+
     // MARK: - Segues
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let trafficController = TrafficContentViewController()
-    
+        _ = tableView.indexPathForSelectedRow!
+        if let _ = tableView.cellForRow(at: indexPath) {
         let myData = rssItems?[indexPath.row]
         performSegue(withIdentifier: "showContentSegue", sender: myData)
+        }
+    }
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let menuTableViewController = segue.destination as!
+        MenuTableViewController
+        menuTableViewController.currentItem = self.title!
+        menuTableViewController.transitioningDelegate = menuTransitionManager
+        menuTransitionManager.delegate = self
         
-        trafficController.contentTitleLabel.text = myData?.title
-        trafficController.contentPubDateLabel.text = myData?.pubDate
-        trafficController.contentDescriptionLabel.text = myData?.description
-        
+        if segue.identifier == "showContentSegue" {
+            if let dest: TrafficContentViewController = segue.destination as? TrafficContentViewController {
+            let rssItem = sender as? TrafficContentViewController.RssItem
+            dest.rssItem = rssItem!
+            }
+        }
     }
     
     // Mark: - Table View
@@ -83,6 +91,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return rssItems.count
  
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -111,28 +120,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // MARK: - Navigation
-    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+    func unwindToHome(segue: UIStoryboardSegue) {
         let sourceController = segue.source as! MenuTableViewController
         self.title = sourceController.currentItem
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let menuTableViewController = segue.destination as!
-        MenuTableViewController
-        menuTableViewController.currentItem = self.title!
-        menuTableViewController.transitioningDelegate = menuTransitionManager
-        menuTransitionManager.delegate = self
-    }
-    
-}
-
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
 }

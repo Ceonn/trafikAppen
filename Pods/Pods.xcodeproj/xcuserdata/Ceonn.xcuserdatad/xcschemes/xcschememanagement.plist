@@ -14,9 +14,24 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Scrollable.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>5200043C45242016158828551417268C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>743B373AAD0AB5693B7A2773C060F40D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '743B373AAD0AB5693B7A2773C060F40D'
-               BlueprintName = 'Pods-trafikAppen'
+               BlueprintIdentifier = '5200043C45242016158828551417268C'
+               BlueprintName = 'Scrollable'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-trafikAppen.framework'>
+               BuildableName = 'Scrollable.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
