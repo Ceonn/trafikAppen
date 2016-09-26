@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E85D8821D9924F1003244BC /* RssItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85D8811D9924F1003244BC /* RssItem.swift */; };
 		B901EAF1DD7FBFB10FA95352 /* Pods_trafikAppen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338BF22C60E791909C3AB629 /* Pods_trafikAppen.framework */; };
 		EC4E54661D8D754600A8EFAF /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4E54651D8D754600A8EFAF /* NewsTableViewCell.swift */; };
 		EC4E54681D8D7AEB00A8EFAF /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4E54671D8D7AEB00A8EFAF /* FeedParser.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		338BF22C60E791909C3AB629 /* Pods_trafikAppen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trafikAppen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E85D8811D9924F1003244BC /* RssItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RssItem.swift; sourceTree = "<group>"; };
 		BDB6149579AACA37DA76BEA7 /* Pods-trafikAppen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trafikAppen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trafikAppen/Pods-trafikAppen.debug.xcconfig"; sourceTree = "<group>"; };
 		EC4E54651D8D754600A8EFAF /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		EC4E54671D8D7AEB00A8EFAF /* FeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
@@ -73,6 +75,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8E85D87E1D9923C4003244BC /* Initial Controler */ = {
+			isa = PBXGroup;
+			children = (
+				ECF8AC3D1D8D37340055F93C /* ViewController.swift */,
+				EC4E54651D8D754600A8EFAF /* NewsTableViewCell.swift */,
+			);
+			name = "Initial Controler";
+			sourceTree = "<group>";
+		};
+		8E85D87F1D9923E7003244BC /* TrafficControler */ = {
+			isa = PBXGroup;
+			children = (
+				EC7A5C831D8EA01C008E011D /* TrafficContentViewController.swift */,
+			);
+			name = TrafficControler;
+			sourceTree = "<group>";
+		};
+		8E85D8801D992408003244BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC4E54671D8D7AEB00A8EFAF /* FeedParser.swift */,
+				8E85D8811D9924F1003244BC /* RssItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		EC4E54621D8D58C900A8EFAF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				ECF8AC3B1D8D37340055F93C /* AppDelegate.swift */,
-				ECF8AC3D1D8D37340055F93C /* ViewController.swift */,
 				EC7A5C851D905AD1008E011D /* MenuTableViewController.swift */,
-				EC7A5C831D8EA01C008E011D /* TrafficContentViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -98,8 +124,6 @@
 		EC4E54641D8D5B0E00A8EFAF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EC4E54651D8D754600A8EFAF /* NewsTableViewCell.swift */,
-				EC4E54671D8D7AEB00A8EFAF /* FeedParser.swift */,
 				EC7A5C871D905AEF008E011D /* MenuTableViewCell.swift */,
 				EC7A5C891D9066B1008E011D /* MenuTransitionManager.swift */,
 			);
@@ -127,6 +151,9 @@
 		ECF8AC3A1D8D37340055F93C /* trafikAppen */ = {
 			isa = PBXGroup;
 			children = (
+				8E85D8801D992408003244BC /* Model */,
+				8E85D87F1D9923E7003244BC /* TrafficControler */,
+				8E85D87E1D9923C4003244BC /* Initial Controler */,
 				ECF8AC3F1D8D37340055F93C /* Main.storyboard */,
 				ECF8AC471D8D37340055F93C /* LaunchScreen.storyboard */,
 				EC4E54631D8D5ADC00A8EFAF /* Controller */,
@@ -271,6 +298,7 @@
 				EC4E54661D8D754600A8EFAF /* NewsTableViewCell.swift in Sources */,
 				ECF8AC3C1D8D37340055F93C /* AppDelegate.swift in Sources */,
 				EC4E54681D8D7AEB00A8EFAF /* FeedParser.swift in Sources */,
+				8E85D8821D9924F1003244BC /* RssItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

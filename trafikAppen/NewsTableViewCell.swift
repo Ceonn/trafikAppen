@@ -9,10 +9,25 @@
 import UIKit
 
 class NewsTableViewCell: UITableViewCell {
+    
+    
+    var item: RssItem! {
+        didSet{
+            updateUI()
+        }
+    }
+    
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var pubTimeLabel: UILabel!
     @IBOutlet weak var postDescriptionLabel: UILabel!
+    
+    
+    fileprivate func updateUI() {
+        self.titleLabel.text = self.item.title
+        self.pubTimeLabel.text = self.item.pubDate
+        self.postDescriptionLabel.text = self.item.description
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -18,6 +18,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Variables
     private var rssItems:[(title: String, description: String, pubDate: String)]?
     
+    var items = [RssItem]()
+    
     let menuTransitionManager = MenuTransitionManager()
     
     // Functions
@@ -27,6 +29,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.items = RssItem.createData()
         
         // Table view setup
         tableView.delegate = self
@@ -53,6 +57,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     // MARK: - Segues
+    
+    /*
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         _ = tableView.indexPathForSelectedRow!
         if let _ = tableView.cellForRow(at: indexPath) {
@@ -75,6 +81,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
     }
+    //  */
+    
+    //*
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showContentSegue", sender: self.items[(indexPath as NSIndexPath).row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showContentSegue" {
+            let tcVC = segue.destination as! TrafficContentViewController
+            tcVC.item = sender as! RssItem /*YOUR NEW MODEL */
+        }
+    }
+//  */
     
     // Mark: - Table View
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -84,12 +104,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         
-        guard let rssItems = rssItems else {
-            return 0
-        }
-        
-        return rssItems.count
+//        guard let rssItems = rssItems else {
+//            return 0
+//        }
+//        
+//        return rssItems.count
  
+        return self.items.count
     }
     
     
@@ -97,13 +118,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTableViewCell
         
-        // Configure the cell...
-        if let item = rssItems?[indexPath.row] {
-            cell.titleLabel.text = item.title
-            cell.postDescriptionLabel.text = item.description
-            cell.pubTimeLabel.text = item.pubDate
-        }
-        
+//        // Configure the cell...
+//        if let item = rssItems?[indexPath.row] {
+//            cell.titleLabel.text = item.title
+//            cell.postDescriptionLabel.text = item.description
+//            cell.pubTimeLabel.text = item.pubDate
+//        }
+
+        cell.item = self.items[(indexPath as NSIndexPath).row]
         return cell
         
     }
